@@ -10,18 +10,18 @@ const Header = ({currentUser,hidden,signOutStart}) =>(
 	<div className="headerContainer">
 		<div className="optionsContainer">
 			<Link to='/dashboard' >
-				DASHBOARD
+				<button className="ripple">DASHBOARD</button>
 			</Link>
 			<Link to='/assignments' >
-				ASSIGNMENTS
+				<button className="ripple">ASSIGNMENTS</button>
 			</Link>
 			<Link to='/schedule'>
-				SCHEDULE
+				<button className="ripple">SCHEDULE</button>
 			</Link>
 			<Link to='/groups'>
-				GROUPS
+				<button className="ripple">GROUPS</button>
 			</Link>
-			<Link to='/' onClick={() => auth.signOut()} > SIGN OUT </Link>
+			<Link to='/' onClick={() => auth.signOut()} > <button className="ripple">SIGN OUT</button> </Link>
 		</div>
 	</div>
 )

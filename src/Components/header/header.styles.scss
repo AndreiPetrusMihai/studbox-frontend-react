@@ -15,9 +15,30 @@
         align-items: center;
         justify-content: flex-end;
         a{
-            padding: 10px 15px;
             cursor : pointer;
+            color: white;
+        }
+        button{
+            padding: 17px;
+            background-color: transparent;
+            outline: 0;
+            border: 0;
+            overflow: hidden;
         }
     }
 
 }
+
+.ripple {
+    background-position: center;
+    transition: background 0.5s;
+}
+.ripple:hover {
+    background: #b800b8 radial-gradient(circle, #b800b8 1%, transparent 1%) center/15000%;
+}
+.ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+}
+
