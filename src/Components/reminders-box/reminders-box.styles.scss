@@ -1,11 +1,12 @@
 .remindersBoxContainer{
-  border-bottom: 3px solid black;
+  border-top: 3px solid var(--colorThree);
+  border-bottom: 3px solid var(--colorThree);
   margin-bottom: 10px;
   display: flex;
   size: auto;
   flex-direction: column;
   max-height: 415px;
-
+  background-color: var(--colorFour);
   .scrollable{
 
     overflow: auto;

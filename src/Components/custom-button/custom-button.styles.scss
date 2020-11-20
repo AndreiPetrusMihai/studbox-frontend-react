@@ -17,23 +17,23 @@
 }
 
 .buttonStyles{
-  background-color: black;
+  background-color: var(--color1);
   color: white;
   &:hover{
-    background-color: white;
+    background-color: var(--colorThree);
     color: black;
     border: 1px solid black;
   }
 }
 
 .invertedButtonStyles{
-  background-color: white;
-  color: black;
+  background-color: var(--colorThree);
+  color: var(--colorThree);
   border: 1px solid black;
 
   &:hover{
-    background-color:black;
-    color: white;
+    background-color:var(--colorThree);
+    color: var(--colorThree);
     border: none;
   }
 }

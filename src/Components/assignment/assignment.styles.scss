@@ -1,0 +1,35 @@
+.assignmentContainer{
+  border-top: 3px solid var(--colorThree);
+
+  button {
+    color: var(--colorThree);
+    min-width: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 20px;
+    justify-self: right;
+  }
+
+  .infoContainer{
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  .buttonStyles {
+    font-size: 10px;
+    background-color: var(--colorOne);
+    border: 1px solid var(--colorThree);
+    color: black;
+
+    &:hover {
+      font-weight: bold;
+      background-color: var(--colorOne);
+      color: white;
+      border: 1px solid var(--colorThree);
+    }
+  }
+}

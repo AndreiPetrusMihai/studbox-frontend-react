@@ -11,7 +11,7 @@ const AssignmentsPreview = ({listOfPrivateAssignments}) =>{
         <div className="assignmentsPreviewContainer">
             <div className="privateBox">
                 <h1>PRIVATE</h1>
-                <div>
+                <div className="scrollable">
                     {
                         listOfPrivateAssignments.map(assignment =>
                             <Assignment title={assignment.title} deadline={assignment.deadline} assignmentKey={assignment.assignmentKey} key={assignment.assignmentKey} description={assignment.description}/>)
@@ -20,7 +20,7 @@ const AssignmentsPreview = ({listOfPrivateAssignments}) =>{
             </div>
             <div className="groupBox">
                 <h1>GROUP</h1>
-                <div>
+                <div className="scrollable">
 
                 </div>
             </div>

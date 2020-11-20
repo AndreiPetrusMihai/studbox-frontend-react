@@ -7,11 +7,11 @@
   padding: 10px;
   display: grid;
   grid-template-columns: 25% 75%;
-  border-top: 3px solid black;
+  border-top: 3px solid var(--colorThree);
+  border-bottom: 3px solid var(--colorThree);
   .reminderSide{
     h2{
       text-align: center;
-      border-bottom: 3px solid black;
       margin:0;
       margin-bottom: 3px;
       padding: 15px;

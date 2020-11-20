@@ -7,12 +7,20 @@
     text-align: center;
 
   .privateBox{
-    border: 3px solid grey;
+    border: 3px solid #8E8D8A;
     margin: 0 5px;
+    .scrollable{
+      height: 75vh;
+      overflow: auto;
+    }
   }
+
   .groupBox{
-    border: 3px solid grey;
+    border: 3px solid #8E8D8A;
     margin: 0 5px;
+    .scrollable{
+      overflow: auto;
+    }
 
   }
 }

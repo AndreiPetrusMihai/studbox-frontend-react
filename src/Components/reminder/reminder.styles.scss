@@ -2,16 +2,45 @@
 
 
 .reminderContainer{
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--colorThree);
     margin: 20px;
-    text-align: center;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .infoContainer{
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+    }
 
     p{
         margin: 10px;
     }
 
     button{
-        margin-bottom: 10px;
+        color : var(--colorThree);
+        min-width: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        height:20px;
+        justify-self: right;
+    }
+
+    .buttonStyles{
+        font-size: 10px;
+        background-color: var(--colorOne);
+        border: 1px solid var(--colorThree);
+        color: black;
+        &:hover{
+            font-weight: bold;
+            background-color: var(--colorOne);
+            color: white;
+            border: 1px solid var(--colorThree);
+        }
     }
 }
+

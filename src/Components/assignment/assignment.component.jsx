@@ -5,11 +5,14 @@ import {connect} from 'react-redux';
 
 const Assignment = ({title,description,deadline,assignmentKey,deleteAssignment})=>{
     return (
-        <div className="AssignmentContainer">
-            <p>{title}</p>
-            <p>{description}</p>
-            <p>{deadline}</p>
-            <button onClick={() => deleteAssignment(assignmentKey)}>
+        <div className="assignmentContainer">
+            <div className="infoContainer">
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <p>{deadline}</p>
+            </div>
+
+            <button className="buttonStyles" onClick={() => deleteAssignment(assignmentKey)}>
                 X
             </button>
         </div>

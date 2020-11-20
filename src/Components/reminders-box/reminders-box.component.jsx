@@ -11,13 +11,11 @@ const RemindersBox = ({remindersList}) =>{
 
     return(
         <div className="remindersBoxContainer">
-
             <div className="scrollable">
                     {
                         remindersList.map(reminder => <Reminder key={reminder.dataKey} dataKey={reminder.dataKey} text={reminder.text} date={reminder.date}/>)
                     }
             </div>
-
         </div>
     )
 

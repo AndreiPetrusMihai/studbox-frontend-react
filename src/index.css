@@ -20,6 +20,11 @@ code {
   monospace;
 }
 #root{
+  --background: #eae7dc;
+  --colorOne: #E85A4F;
+  --colorTwo: #E98074;
+  --colorThree: #8E8D8A;
+  --colorFour:  #D8C3A5;
   height: 100%;
   width: 100%;
 }

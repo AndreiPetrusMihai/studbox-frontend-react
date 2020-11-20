@@ -13,12 +13,14 @@ const Reminder = ({text,date,dataKey,deleteReminder}) =>
 
     return(
         <div className="reminderContainer">
-            <p>{details.text.concat()}</p>
-            <p>{details.date}</p>
-
-            <button onClick={onClickDelete} type='submit'>
+            <button className="buttonStyles" onClick={onClickDelete} type='submit'>
                 X
             </button>
+            <div className="infoContainer">
+                <p>{details.text.concat()}</p>
+                <p>{details.date}</p>
+            </div>
+
 
         </div>
     )

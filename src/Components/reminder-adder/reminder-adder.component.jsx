@@ -27,7 +27,6 @@ const ReminderAdder = ({addReminderAction}) =>{
 
     return(
         <div className="reminderAdderContainer">
-            <h3 className="reminderAdderTitle">Add reminder</h3>
 
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -46,7 +45,7 @@ const ReminderAdder = ({addReminderAction}) =>{
                     required
                 />
                 <div className="reminderAdderButtonsContainer">
-                    <CustomButton type='submit'> Add </CustomButton>
+                    <CustomButton className="ripple"  type='submit'> Add </CustomButton>
                 </div>
             </form>
         </div>
