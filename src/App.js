@@ -38,7 +38,6 @@ class App extends React.Component {
     render(){
         return (
             <div className="App">
-
                 {this.props.currentUser ? (<Header/>) : null}
                 <Switch className="routeContainers">
                     <Route exact path='/' render={() => this.props.currentUser ?
