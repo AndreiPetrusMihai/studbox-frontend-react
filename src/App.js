@@ -7,7 +7,7 @@ import WelcomePage from "./Pages/WelcomePage/welcome-page.component";
 import {createUserProfileDocument,auth} from "./Firebase/firebase.utils";
 import Dashboard from "./Pages/Dashboard/dashboard.component";
 import Header from "./Components/header/header.component";
-
+import Assignments from "./Pages/Assignments/assignments.component";
 
 
 class App extends React.Component {
@@ -48,6 +48,7 @@ class App extends React.Component {
                         (<Redirect to='/' />
                         ) : (
                             <Dashboard />)}/>
+                    <Route exact path='/assignments' component={Assignments}/>
                 </Switch>
             </div>
         );

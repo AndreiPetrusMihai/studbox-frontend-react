@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './reminders-box.styles.scss';
 import Reminder from "../reminder/reminder.component";
 import {connect} from "react-redux";
@@ -12,10 +12,12 @@ const RemindersBox = ({remindersList}) =>{
     return(
         <div className="remindersBoxContainer">
 
-            <h2>Reminders</h2>
-            {
-                remindersList.map(reminder => <Reminder key={reminder.dataKey} dataKey={reminder.dataKey} text={reminder.text} date={reminder.date}/>)
-            }
+            <div className="scrollable">
+                    {
+                        remindersList.map(reminder => <Reminder key={reminder.dataKey} dataKey={reminder.dataKey} text={reminder.text} date={reminder.date}/>)
+                    }
+            </div>
+
         </div>
     )
 

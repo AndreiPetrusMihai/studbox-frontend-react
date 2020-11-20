@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from "../../Components/header/header.component";
 import './dashboard.styles.scss';
 import RemindersBox from "../../Components/reminders-box/reminders-box.component";
 import NewsBox from "../../Components/news-box/news-box.component";
@@ -9,14 +8,14 @@ const Dashboard = () =>
 
     return(
         <div className="dashboardContainer">
-            <div>
+            <div className="reminderSide">
+                <h2>Reminders</h2>
                 <RemindersBox/>
                 <ReminderAdder/>
             </div>
 
             <NewsBox/>
         </div>
-
     )
 }
 

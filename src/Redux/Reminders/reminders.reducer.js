@@ -1,5 +1,4 @@
 import RemindersTypes from "./reminders.types";
-import {act} from "@testing-library/react";
 
 
 const INITIAL_STATE = {

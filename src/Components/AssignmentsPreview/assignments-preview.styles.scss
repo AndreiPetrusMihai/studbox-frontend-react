@@ -1,0 +1,18 @@
+
+
+.assignmentsPreviewContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5px;
+    text-align: center;
+
+  .privateBox{
+    border: 3px solid grey;
+    margin: 0 5px;
+  }
+  .groupBox{
+    border: 3px solid grey;
+    margin: 0 5px;
+
+  }
+}

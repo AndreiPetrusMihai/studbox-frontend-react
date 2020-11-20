@@ -1,4 +1,15 @@
 .remindersBoxContainer{
-  border: 3px solid grey;
-  margin-bottom: 25px;
+  border-bottom: 3px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  size: auto;
+  flex-direction: column;
+  max-height: 415px;
+
+  .scrollable{
+
+    overflow: auto;
+
+
+  }
 }

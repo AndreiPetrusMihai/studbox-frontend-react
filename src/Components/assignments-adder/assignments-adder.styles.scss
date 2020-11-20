@@ -1,13 +1,13 @@
-.reminderAdderContainer{
-  border-bottom: 3px solid black;
+.assignmentAdderContainer{
+  border : 3px solid grey;
   text-align: center;
 
 
-  .reminderAdderTitle{
+  .assignmentAdderTitle{
     margin: 10px 0;
     text-align: center;
   }
-  .reminderAdderButtonsContainer{
+  .assignmentAdderButtonsContainer{
     display: flex;
     justify-content: center;
   }
@@ -28,8 +28,8 @@
     height: 40px;
     margin-top: 20px;
     letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
     font-size: 15px;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed' ,sans-serif;

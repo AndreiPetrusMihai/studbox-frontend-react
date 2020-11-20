@@ -16,16 +16,18 @@
         justify-content: flex-end;
 
         a{
-            cursor : pointer;
             color: white;
+            cursor : pointer;
+
+            button{
+                padding: 17px;
+                background-color: transparent;
+                outline: 0;
+                border: 0;
+                overflow: hidden;
+            }
         }
-        button{
-            padding: 17px;
-            background-color: transparent;
-            outline: 0;
-            border: 0;
-            overflow: hidden;
-        }
+
     }
 
 }
@@ -42,4 +44,3 @@
     background-size: 100%;
     transition: background 0s;
 }
-

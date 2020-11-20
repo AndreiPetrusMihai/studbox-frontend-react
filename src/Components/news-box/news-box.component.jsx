@@ -6,7 +6,7 @@ const NewsBox = () =>{
 
     return(
         <div className="newsBoxContainer">
-            BLALBLASL
+            <h2>LATEST ACTIVITY</h2>
 
         </div>
     )
