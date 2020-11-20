@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import FormInput from '../form-input/form-input.component.jsx';
 import CustomButton from '../custom-button/custom-button.component';
 import './sign-up.styles.scss';
+import {auth} from "../../Firebase/firebase.utils";
+import {createUserProfileDocument} from "../../Firebase/firebase.utils";
 
 const SignUp = () => {
 	const [userCredentials,setUserCredentials] =  useState({
@@ -14,12 +16,35 @@ const SignUp = () => {
 
 	const handleSubmit = async event =>{
 		event.preventDefault();
+		if(password!==confirmPassword){
+			alert("Password don't match");
+			return;
+		}
+		try {
+			const { user } = await auth.createUserWithEmailAndPassword(
+				email,
+				password
+			);
+
+			await createUserProfileDocument(user, { displayName });
+
+			setUserCredentials({
+				displayName: '',
+				email: '',
+				password: '',
+				confirmPassword: ''
+			});
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 
-	const handleChange = event=>{
+	const handleChange = async event=>{
 		const {name,value} = event.target;
 		setUserCredentials({...userCredentials,[name] : value});
+
+
 	}
 
 

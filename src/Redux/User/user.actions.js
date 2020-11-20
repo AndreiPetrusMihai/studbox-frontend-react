@@ -2,7 +2,8 @@ import UserActionTypes from "./user.types";
 
 
 
-export const emailSignInStart = (emailAndPassword) =>({
-    type: UserActionTypes.EMAIL_SING_IN_START,
-    payload : emailAndPassword
+export const setCurrentUser = (userData) =>({
+    type: UserActionTypes.SET_CURRENT_USER,
+    payload : userData
 });
+

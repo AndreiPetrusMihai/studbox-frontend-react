@@ -1,8 +1,12 @@
 body{
   font-family: 'Open Sans Condensed';
-  padding: 20px 80px;
+
 }
 
+.App{
+  height: 100%;
+  width: 100%;
+}
 a{
   text-decoration: none;
   color: black;
@@ -10,4 +14,8 @@ a{
 
 *{
   box-sizing: border-box;
+}
+
+.routeContainers{
+  top:70px;
 }

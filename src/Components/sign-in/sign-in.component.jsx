@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import CustomButton from "../custom-button/custom-button.component";
 import './sign-in.styles.scss';
 import FormInput from "../form-input/form-input.component";
-
+import {auth} from "../../Firebase/firebase.utils";
 
 const SignIn = () => {
 
@@ -10,8 +10,19 @@ const SignIn = () => {
 	const {email,password} = userCredentials;
 
 	const handleSubmit = async event =>{
+
 		event.preventDefault();
+
+		const { email, password } = userCredentials;
+
+		try {
+			await auth.signInWithEmailAndPassword(email, password);
+			setCredentials({ email: '', password: '' });
+		} catch (error) {
+			console.log(error);
+		}
 	}
+
 
 	const handleChange = event =>{
 		const {value,name} = event.target;
