@@ -1,18 +1,29 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './reminders-box.styles.scss';
 import Reminder from "../reminder/reminder.component";
+import {connect} from "react-redux";
 
-const RemindersBox = () =>{
-    const hardReminders = [<Reminder text="blabla" date={123}/>,<Reminder text="dasca" date={1243}/>,<Reminder text="blbbasabla" date={123}/>];
+const RemindersBox = ({remindersList}) =>{
+
+
+    // eslint-disable-next-line no-unused-vars
+
+
     return(
         <div className="remindersBoxContainer">
-            <t>Reminders</t>
+
+            <h2>Reminders</h2>
             {
-                hardReminders
+                remindersList.map(reminder => <Reminder key={reminder.dataKey} dataKey={reminder.dataKey} text={reminder.text} date={reminder.date}/>)
             }
         </div>
     )
 
 }
 
-export default RemindersBox;
+const mapStateToProps = ({reminders}) =>({
+    remindersList : reminders.remindersList,
+});
+
+
+export default connect(mapStateToProps)(RemindersBox);
