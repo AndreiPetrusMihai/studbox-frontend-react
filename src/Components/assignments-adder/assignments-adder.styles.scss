@@ -1,5 +1,6 @@
 .assignmentAdderContainer{
-  border : 3px solid grey;
+  border-top : 3px solid grey;
+  border-bottom : 3px solid grey;
   text-align: center;
 
 
@@ -12,7 +13,8 @@
     justify-content: center;
   }
   .formInputContainer{
-    margin-top: auto;
+
+    margin-top: 30px;
     margin-bottom: auto;
   }
   .formContainer{

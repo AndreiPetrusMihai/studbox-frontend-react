@@ -11,7 +11,7 @@ $mainColor : #8E8d8a;
 
   .formInputContainer{
     background: none;
-    background-color: #EAE7DC;
+    background-color: var(--background);
     color: $subColor;
     font-size: 18px;
     padding: 10px 10px 10px 5px;

@@ -5,8 +5,30 @@
   flex-direction: column;
   width: 380px;
 
+  .signUpButtonContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .formInputContainer{
+    background-color: white;
+  }
+
   .signUpTitle{
     margin: 10px 0;
+  }
+  .invertedButtonStyles{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+    &:hover{
+      background-color:var(--colorOne);
+      color: white;
+      border: none;
+    }
   }
 
 }

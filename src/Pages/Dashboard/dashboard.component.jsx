@@ -14,7 +14,10 @@ const Dashboard = () =>
                 <ReminderAdder/>
             </div>
 
-            <NewsBox/>
+            <div className="newsSide">
+                <h2>Latest Activity</h2>
+                <NewsBox/>
+            </div>
         </div>
     )
 }

@@ -1,18 +1,82 @@
 
 
-.main-page{
-  overflow: scroll;
-  position: fixed;
-  padding:0;
-  margin:0;
-
-  left:0;
-  height: 100%;
-  width: 100%;
+////@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+//
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
 }
 
-.main-welcome{
-  font-size: 30px;
-  height: 100%;
-  width: 100%;
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
+
+svg {
+  path {
+    transition: .1s;
+  }
+  &:hover path {
+    d: path("M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z");
+  }
+}
+
+body {
+  color: #333;
+  background-color: var(--background);
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+h1{
+  font-size: 50px;
+  font-family: "Book Antiqua", cursive;
+  padding-bottom: 50px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+header {
+  color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 30vw;
+  text-align: center;
+}
+
+main {
+
+  &::after {
+    border-right: 2px;
+    content: '';
+    position: absolute;
+    top: calc(10vh + 1.618em);
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+  }
+}
+
+footer {
+  background: #dddee1;
+  padding: 5vh 0;
+  text-align: center;
+  position: relative;
+}
+
+small {
+  opacity: .5;
+  font-weight: 300;
+
+  .a {
+    color: inherit;
+  }
+}
+
+
+

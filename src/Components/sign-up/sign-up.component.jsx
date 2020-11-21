@@ -87,7 +87,10 @@ const SignUp = () => {
 					label='Confirm Password'
 					required
 				/>
-				<CustomButton type='submit'>SIGN UP</CustomButton>
+				<div className="signUpButtonContainer">
+					<CustomButton type='submit'>SIGN UP</CustomButton>
+
+				</div>
 			</form>
 		</div>
 		)

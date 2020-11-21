@@ -8,8 +8,25 @@
   .signInTitle{
     margin: 10px 0;
   }
+  .formInputContainer{
+    background-color: white;
+  }
   .signInButtonsContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    .invertedButtonStyles{
+      width: 100px;
+      height: 40px;
+      background-color:white;
+      color: black;
+      border: 1px solid black;
+
+      &:hover{
+        background-color:var(--colorOne);
+        color: white;
+        border: none;
+      }
+    }
   }
 }

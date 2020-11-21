@@ -1,14 +1,17 @@
 body{
-  font-family: 'Open Sans Condensed';
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background);
+
 }
 
 .App{
+  background-color: var(--background);
   height: 100%;
   width: 100%;
-  background-color: var(--background);
 }
 a{
   text-decoration: none;
+  color:black;
 }
 
 *{

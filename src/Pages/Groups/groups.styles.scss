@@ -1,0 +1,43 @@
+
+
+.groupsContainer{
+  background-color: var(--colorFour);
+  height:80%;
+  margin:35px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  .groupManager{
+    display: grid;
+    grid-template-rows: 90% 10%;
+
+    .invertedButtonStyles{
+      background-color: #D8C3A5;
+      color:black;
+      font-size: 20px;
+
+    }
+    .invertedButtonStyles:hover{
+      background-color: #E85A4F;
+
+    }
+  }
+  .groupActions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .invertedButtonStyles{
+    height: 30px;
+    width: 60px;
+    align-self: center;
+    background-color: var(--background);
+    color: black;
+    }
+
+    .invertedButtonStyles:hover{
+    background-color: var(--colorOne);
+    color: white;
+    }
+  }
+}
+

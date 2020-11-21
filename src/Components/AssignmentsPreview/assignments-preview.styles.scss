@@ -7,7 +7,9 @@
     text-align: center;
 
   .privateBox{
-    border: 3px solid #8E8D8A;
+    border-top: 3px solid #8E8D8A;
+    border-bottom: 3px solid #8E8D8A;
+
     margin: 0 5px;
     .scrollable{
       height: 75vh;
@@ -16,7 +18,8 @@
   }
 
   .groupBox{
-    border: 3px solid #8E8D8A;
+    border-top: 3px solid #8E8D8A;
+    border-bottom: 3px solid #8E8D8A;
     margin: 0 5px;
     .scrollable{
       overflow: auto;

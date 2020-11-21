@@ -1,7 +1,9 @@
 .newsBoxContainer{
   margin-bottom: 25px;
   margin-left: 10px;
-
+  background-color: var(--colorFour);
+  border-top: 3px solid var(--colorThree);
+  border-bottom: 3px solid var(--colorThree);
   h2{
     text-align: center;
   }
