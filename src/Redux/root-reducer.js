@@ -6,7 +6,7 @@ import assignmentsReducer from "./Assignments/assignments.reducer";
 import {persistReducer} from 'redux-persist';
 import groupReducer from "./Groups/groups.reducer";
 const persistConfig = {
-    key : 'user',
+    key : 'root',
     storage:storage
 }
 

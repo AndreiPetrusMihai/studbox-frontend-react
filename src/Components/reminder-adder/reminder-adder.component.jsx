@@ -34,7 +34,7 @@ const ReminderAdder = ({addReminderAction}) =>{
                     type='text'
                     handleChange={handleChange}
                     value={details.text}
-                    label='text'
+                    label='Text'
                     required
                 />
                 <FormInput

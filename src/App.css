@@ -1,11 +1,9 @@
 body{
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background);
 
 }
 
 .App{
-  background-color: var(--background);
   height: 100%;
   width: 100%;
 }

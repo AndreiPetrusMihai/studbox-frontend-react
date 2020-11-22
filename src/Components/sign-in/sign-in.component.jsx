@@ -3,8 +3,11 @@ import CustomButton from "../custom-button/custom-button.component";
 import './sign-in.styles.scss';
 import FormInput from "../form-input/form-input.component";
 import {auth} from "../../Firebase/firebase.utils";
+import {connect} from "react-redux";
+import {signInStart} from "../../Redux/User/user.actions";
 
-const SignIn = () => {
+
+const SignIn = ({signInStart}) => {
 
 	const [userCredentials,setCredentials] = useState({email:'',password:''})
 	const {email,password} = userCredentials;
@@ -15,14 +18,10 @@ const SignIn = () => {
 
 		const { email, password } = userCredentials;
 
-		try {
-			await auth.signInWithEmailAndPassword(email, password);
-			setCredentials({ email: '', password: '' });
-		} catch (error) {
-			console.log(error);
-		}
-	}
+		signInStart({email, password})
 
+		setCredentials({ email: '', password: '' });
+	}
 
 	const handleChange = event =>{
 		const {value,name} = event.target;
@@ -59,6 +58,8 @@ const SignIn = () => {
 	)
 }
 
+const mapDispatchToProps = (dispatch) => ({
+	signInStart : () => dispatch(signInStart())
+})
 
-
-export default SignIn;
+export default connect(null,mapDispatchToProps)(SignIn);

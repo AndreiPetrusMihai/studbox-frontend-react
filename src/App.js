@@ -4,7 +4,7 @@ import{connect} from 'react-redux';
 import {Switch,Route,Redirect} from 'react-router-dom';
 import {setCurrentUser} from "./Redux/User/user.actions";
 import WelcomePage from "./Pages/WelcomePage/welcome-page.component";
-import {createUserProfileDocument,auth} from "./Firebase/firebase.utils";
+import {auth} from "./Firebase/firebase.utils";
 import Dashboard from "./Pages/Dashboard/dashboard.component";
 import Assignments from "./Pages/Assignments/assignments.component";
 import Groups from "./Pages/Groups/groups.component";
@@ -17,17 +17,7 @@ class App extends React.Component {
         const { setCurrentUser } = this.props;
 
         this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-            if (userAuth) {
-                const userRef = await createUserProfileDocument(userAuth);
-
-                userRef.onSnapshot(snapShot => {
-                    setCurrentUser({
-                        id: snapShot.id,
-                        ...snapShot.data()
-                    });
-                });
-            }
-            else{
+            if (!userAuth) {
                 setCurrentUser(userAuth);
             }
         });

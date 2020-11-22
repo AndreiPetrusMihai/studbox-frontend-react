@@ -2,65 +2,68 @@ import React,{useState} from 'react';
 import FormInput from '../form-input/form-input.component.jsx';
 import CustomButton from '../custom-button/custom-button.component';
 import './sign-up.styles.scss';
-import {auth} from "../../Firebase/firebase.utils";
-import {createUserProfileDocument} from "../../Firebase/firebase.utils";
+import {signUpStart} from "../../Redux/User/user.actions";
+import {connect} from 'react-redux';
+//POST userID name surname email university
 
-const SignUp = () => {
+const SignUp = ({signUpStart}) => {
 	const [userCredentials,setUserCredentials] =  useState({
-		displayName: '',
-		email: '',
-		password: '',
-		confirmPassword:''
+		name : '',
+		surname : '',
+		email : '',
+		university : '',
+		password : '',
+		confirmPassword : ''
 	});
-	const {displayName,password,email,confirmPassword} = userCredentials;
+
+	const {name,surname,email,university,password,confirmPassword} = userCredentials;
 
 	const handleSubmit = async event =>{
 		event.preventDefault();
 		if(password!==confirmPassword){
-			alert("Password don't match");
+			alert("Passwords don't match");
 			return;
 		}
-		try {
-			const { user } = await auth.createUserWithEmailAndPassword(
-				email,
-				password
-			);
+		console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+		signUpStart({name,surname,email,university,password});
 
-			await createUserProfileDocument(user, { displayName });
+		setUserCredentials({
+			name : '',
+			surname : '',
+			email : '',
+			university : '',
+			password : '',
+			confirmPassword : ''
+		});
 
-			setUserCredentials({
-				displayName: '',
-				email: '',
-				password: '',
-				confirmPassword: ''
-			});
-		} catch (error) {
-			console.error(error);
-		}
 	}
-
 
 	const handleChange = async event=>{
 		const {name,value} = event.target;
 		setUserCredentials({...userCredentials,[name] : value});
-
-
 	}
-
 
 	return(
 		<div className="signUpContainer">
 			<h1 className="signUpTitle">
-				I do not have a account
+				I do not have an account
 			</h1>
 			<span>Sign up with your email and password</span>
 			<form className='sign-up-form' onSubmit={handleSubmit}>
 				<FormInput
 					type='text'
-					name='displayName'
-					value={displayName}
+					name='name'
+					value={name}
 					onChange={handleChange}
-					label='Display Name'
+					label='Name'
+					required
+				/>
+				<FormInput
+					type='text'
+					name='surname'
+					value={surname}
+					onChange={handleChange}
+					label='Surname'
 					required
 				/>
 				<FormInput
@@ -69,6 +72,14 @@ const SignUp = () => {
 					value={email}
 					onChange={handleChange}
 					label='Email'
+					required
+				/>
+				<FormInput
+					type='text'
+					name='university'
+					value={university}
+					onChange={handleChange}
+					label='University'
 					required
 				/>
 				<FormInput
@@ -96,5 +107,8 @@ const SignUp = () => {
 		)
 }
 
+const mapDispatchToProps = (dispatch) => ({
+	signUpStart : (userData) => dispatch(signUpStart(userData))
+})
 
-export default SignUp;
+export default connect(null,mapDispatchToProps)(SignUp);

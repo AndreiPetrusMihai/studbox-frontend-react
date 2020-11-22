@@ -5,7 +5,7 @@ import GroupCreator from "../../Components/group-creator/group-creator.component
 import {connect} from 'react-redux';
 import {toggleCreation} from "../../Redux/Groups/groups.actions";
 
-const Groups = ({createMode,toggleCreation}) =>{
+const Groups = ({createMode,toggleCreation,selectedGroup}) =>{
 
     return(
         <div className="groupsContainer">
@@ -15,7 +15,7 @@ const Groups = ({createMode,toggleCreation}) =>{
             </div>
             <div className="groupActions">
                 {
-                    createMode ? (<GroupCreator/>) : ("group info")
+                    createMode ? (<GroupCreator/>) : (selectedGroup? (selectedGroup.name) : ("Select a group"))
                 }
             </div>
         </div>
@@ -23,7 +23,8 @@ const Groups = ({createMode,toggleCreation}) =>{
 }
 
 const mapStateToProps = ({groups}) => ({
-    createMode : groups.createMode
+    createMode : groups.createMode,
+    selectedGroup : groups.selectedGroup
 })
 
 const mapDispatchToProps = (dispatch) => ({

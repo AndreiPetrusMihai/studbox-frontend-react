@@ -5,8 +5,9 @@ import {addGroup} from "../../Redux/Groups/groups.actions";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import {auth} from "../../Firebase/firebase.utils";
+import {generateUniqueID} from "web-vitals/dist/lib/generateUniqueID";
 
-const GroupCreator = () => {
+const GroupCreator = ({addGroup}) => {
 
 
     const [groupData,setGroupData] = useState({name:'',description:''})
@@ -15,6 +16,8 @@ const GroupCreator = () => {
     const handleSubmit = async event =>{
 
         event.preventDefault();
+        const newGroup={ name : groupData.name,description : groupData.description ,groupKey : generateUniqueID(),members : 1}
+        addGroup(newGroup);
 
     }
 

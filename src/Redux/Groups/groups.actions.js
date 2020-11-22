@@ -15,3 +15,8 @@ export const toggleCreation = () => ({
     type : GroupTypes.TOGGLE_CREATION,
     payload: null
 })
+
+export const selectGroup = (groupKey) => ({
+    type : GroupTypes.SELECT_GROUP,
+    payload: groupKey
+})
